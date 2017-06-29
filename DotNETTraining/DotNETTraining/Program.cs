@@ -9,23 +9,29 @@ namespace DotNETTraining
     class Program
     {
         static void Main(string[] args)
-        {
-            int a = 123;
+        {   
+            Console.WriteLine("ENTER THE NUMBER");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = a;
             int rev = 0;
-            int remainder;
-            int sum=0;
-           while(a!=0)
+            int remainder = 0;
+            int sum = 0;
+            while(b!=0)
            {
-               remainder = a % 10;
+               remainder = b % 10;
                rev = rev * 10 + remainder;
-               a = a / 10;
+               b = b / 10;
            }
+           Console.WriteLine(rev);
+            
+            
             while(a!=0)
             {
                 remainder= a % 10;
                 sum = sum + remainder;
                 a = a / 10;
             }
+            Console.WriteLine(sum);
         }
     }
 }
